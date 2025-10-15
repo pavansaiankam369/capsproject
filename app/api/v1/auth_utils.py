@@ -1,11 +1,9 @@
 from datetime import datetime, timedelta
 from jose import jwt, JWTError
 from typing import Optional
-from app.core.config import settings
+from app.core.config import *
 
-SECRET_KEY = settings.SECRET_KEY
-ALGORITHM = settings.ALGORITHM
-ACCESS_TOKEN_EXPIRE_MINUTES = settings.ACCESS_TOKEN_EXPIRE_MINUTES
+
 
 
 def create_jwt(data: dict, expires_delta: Optional[timedelta] = None):
